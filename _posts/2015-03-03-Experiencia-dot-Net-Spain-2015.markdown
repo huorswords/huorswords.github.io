@@ -2,7 +2,7 @@
 layout: post
 title:  "Experiencia en la dotNet Spain Conference 2015"
 date:   2015-03-03 13:00:00
-categories: conferencia comunidad .net
+categories: evento comunidad .net
 ---
 El pasado 27 y 28 de febrero tuve la gran suerte de asistir al evento nacional .NET más grande al que había podido asistir hasta ahora: la [___dotNet Spain Conference 2015___][dotNetSpain2015Url].
 
@@ -40,7 +40,7 @@ Comparto plenamente su visión en este sentido, y no solamente en el mundo _Clou
 ### Tengo mi aplicación web en el cloud y no escala. ¿Qué hago?
 Quique, por su parte, nos hizo conscientes de las diferencias que existen entre el desarrollo tradicional _on-demand_ y el nuevo paradigma de desarrollo orientado a la nube.
 
-Cosas como entender que no existe un sistema de ficheros propiamente dicho -- <small>y que tenemos que utilizar el servicio de Storage</small> --, o que las referencias en el cloud y en un equipo físico se deben gestionar de forma diferente -- <small><em>Azure Websites</em> o <em>SQL Azure</em></small> --.
+Cosas como entender que no existe un sistema de ficheros propiamente dicho -- _<small>y que tenemos que utilizar el servicio de Storage</small>_ --, o que las referencias en el cloud y en un equipo físico se deben gestionar de forma diferente -- <small><em>Azure Websites</em> o <em>SQL Azure</em></small> --.
 
 Gran charla, aunque la ventana -- <small><em>maldita ventana</em></small> -- de la sala no dejase de hacer ruido, molestando a los asistentes y, en especial, al ponente.
 
@@ -100,12 +100,12 @@ Y, aunque yo soy más de Star Wars que de Star Trek, el homenaje a [Leonard Nimo
 ### Code Smells
 En esta charla Fernando trató de hacer un paso rápido por los considerados __Code Smells__ que Martin Fowler describe en su libro [___Refactoring - Improving the Design of Existing Code___][MartinFowlerRefactoringUrl] y que todo desarrollador debería, al menos, conocer.
 
-Fernando consiguió que me volviesen a entrar ganas de adquirir este libro y leerlo de una vez, ya que si bien he leído algún fragmento en formato digital, creo que será interesante leerlo de cabo a rabo para entender -- <small>y de ese modo evitar</small> -- lo que se consideran malos olores en el código de las aplicaciones desarrolladas mediante OO.
+Fernando consiguió que me volviesen a entrar ganas de adquirir este libro y leerlo de una vez, ya que si bien he leído algún fragmento en formato digital, creo que será interesante leerlo de cabo a rabo para entender -- _<small>y de ese modo evitar</small>_ -- lo que se consideran malos olores en el código de las aplicaciones desarrolladas mediante OO.
 
 ### Por qué deberías plantearte F# para tu próximo proyecto
 Creo que, de las charlas a las que asistí el sábado, esta fue la que menos me llegó.
 
-Si bien ya había visto algo sobre F# -- <small>en mi mini-colaboración en <a href="https://github.com/ploeh/ZeroToNine"><span class="icon  icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg><span class="username"> ploeh/ZeroToNine</span></span></a></small> -- antes de que Alex nos explicara por encima los entresijos del lenguaje no entendía del todo bien como funcionaba.
+Si bien ya había visto algo sobre F# -- _<small>en mi mini-colaboración en <a href="https://github.com/ploeh/ZeroToNine"><span class="icon  icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg><span class="username"> ploeh/ZeroToNine</span></span></a></small>_ -- antes de que Alex nos explicara por encima los entresijos del lenguaje no entendía del todo bien como funcionaba.
 
 Especialmente importante me pareció el concepto de `TypeProvider`. No era consciente de que existían componentes que permitían recuperar datos de tan diversas fuentes que ya estaban programados y que, además, podíamos programar más nosotros (aunque Alex insistió en que era una tarea complicada).
 
@@ -138,7 +138,7 @@ Como colofón final, la charla de Leo de nuevo me ponía otra vez en mi sitio, h
     <figcaption style="text-align: right;">Leo Antoli &copy;</figcaption>
 </figure>
 
-Esta charla se solapó en algunos puntos con el _HOL_ del día anterior, pero la verdad es que no me resultó aburrida, sino más bien todo lo contrario. Es más -- <small>y se lo dije a Leo</small> --, algunas de las preguntas que se habían planteado el día anterior... ¡volví a fallarlas!
+Esta charla se solapó en algunos puntos con el _HOL_ del día anterior, pero la verdad es que no me resultó aburrida, sino más bien todo lo contrario. Es más -- _<small>y se lo dije a Leo</small>_ --, algunas de las preguntas que se habían planteado el día anterior... ¡volví a fallarlas!
 
 ## Experiencia global
 La experiencia que he tenido durante estos dos días ha sido __excelente__.
@@ -153,7 +153,7 @@ Y no solo eso: se marchaba haciendo __ruido__.
 
 Creo que durante la CodeMotion, el equipo de Microsoft que allí estaba tomó nota de esto y planificó las charlas para evitar este tipo de situaciones. O igual fue cosa de la casualidad... no lo sé.
 
-Lo cierto es que creo que los ponentes se merecen un gran respeto, no sólo por lo que saben, sino por enseñárnoslo a los que asistimos a sus charlas de forma completamente desinteresada -- _<small>¿Cobran por dar la ponencia? Yo creo que no...</small>_ --.
+Lo cierto es que creo que los ponentes se merecen un gran respeto, no sólo por lo que saben, sino por enseñárnoslo a los que asistimos a sus charlas de forma completamente desinteresada -- _<small>¿Cobran por dar la ponencia? Yo creo que no...</small>_.
 
 <big><em>Gracias a todos vosotros, ponentes y organizadores, por permitirme pasar un fin de semana aprendiendo y conviviendo con gente que como yo, disfruta del desarrollo.</em></big>
 
