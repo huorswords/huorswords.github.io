@@ -6,6 +6,7 @@ categories: source-control git
 ---
 
 Si eres de los que...
+
 - ... utiliza Git como sistema de control de código fuente.
 - ... sigues el modelo de branching [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/).
 - ... usas como cliente GUI de Git la aplicación [SourceTree](https://www.sourcetreeapp.com/).
@@ -14,6 +15,7 @@ Si eres de los que...
 
 ## GitFlow
 Ya debes saber que el modelo GitFlow define las siguientes ramas:
+
 - **master**: Es la rama estable del proyecto, que está desplegado en producción.
 - **develop**: Destinada a contener la siguiente versión en producción, esta rama debería ser también bastante estable, aunque puede llegar a romperse.
 - **feature**: Cada funcionalidad o bugfix se corresponde con una rama *feature*, en la que se realizan todos los cambios necesarios para implementar dicha funcionalidad. Se sincroniza siempre con *develop*, pero no con *master*.
