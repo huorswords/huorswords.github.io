@@ -6,19 +6,19 @@ categories: source-control git
 ---
 
 Si eres de los que...
-* ... utiliza Git como sistema de control de código fuente.
-* ... sigues el modelo de branching [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/).
-* ... usas como cliente GUI de Git la aplicación [SourceTree](https://www.sourcetreeapp.com/).
+- ... utiliza Git como sistema de control de código fuente.
+- ... sigues el modelo de branching [GitFlow](http://nvie.com/posts/a-successful-git-branching-model/).
+- ... usas como cliente GUI de Git la aplicación [SourceTree](https://www.sourcetreeapp.com/).
 
 ... igual te interesa esto.
 
 ## GitFlow
 Ya debes saber que el modelo GitFlow define las siguientes ramas:
-* **master**: Es la rama estable del proyecto, que está desplegado en producción.
-* **develop**: Destinada a contener la siguiente versión en producción, esta rama debería ser también bastante estable, aunque puede llegar a romperse.
-* **feature**: Cada funcionalidad o bugfix se corresponde con una rama *feature*, en la que se realizan todos los cambios necesarios para implementar dicha funcionalidad. Se sincroniza siempre con *develop*, pero no con *master*.
-* **hotfix**: Cuando un error se detecta en producción, y dicho error no puede esperar a ser corregido hasta la siguiente *release* del proyecto, se crea una rama hotfix, que al finalizar se sincroniza con *master* y con *develop*.
-* **release**: Cuando el ciclo o sprint de desarrollo finaliza y se debe pasar a producción el código disponible en *develop*, se crea una rama *release* que es la que QA debe utilizar para testear la aplicación antes de ser "liberada".
+- **master**: Es la rama estable del proyecto, que está desplegado en producción.
+- **develop**: Destinada a contener la siguiente versión en producción, esta rama debería ser también bastante estable, aunque puede llegar a romperse.
+- **feature**: Cada funcionalidad o bugfix se corresponde con una rama *feature*, en la que se realizan todos los cambios necesarios para implementar dicha funcionalidad. Se sincroniza siempre con *develop*, pero no con *master*.
+- **hotfix**: Cuando un error se detecta en producción, y dicho error no puede esperar a ser corregido hasta la siguiente *release* del proyecto, se crea una rama hotfix, que al finalizar se sincroniza con *master* y con *develop*.
+- **release**: Cuando el ciclo o sprint de desarrollo finaliza y se debe pasar a producción el código disponible en *develop*, se crea una rama *release* que es la que QA debe utilizar para testear la aplicación antes de ser "liberada".
 
 Esta es la idea, a grandes rasgos, de como se debe trabajar aplicando el modelo GitFlow original.
 
