@@ -4,8 +4,8 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Hola, me llamo Ángel García y soy desarrollador de software especializado en tecnologías Microsoft, aunque durante diez años de mi vida también he sido administrador de sistemas (también Microsoft).
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Pese a que llevo muchos años en el sector, no pasa un día sin que aprenda algo nuevo, aunque sea un conocimiento pequeñito. Y eso es precisamente lo que me motiva para seguir en este mundillo.
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+Sólo quiero aprender algo nuevo cada día.
