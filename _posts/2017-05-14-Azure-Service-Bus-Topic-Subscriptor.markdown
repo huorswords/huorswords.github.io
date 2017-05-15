@@ -28,7 +28,7 @@ Los tipos de filtrado que admite una suscripción son:
 - Filtros correlativos.
 - Filtros SQL.
 
-No me voy a parar mucho para explicar las diferencias de cada uno de ellos, pero si queréis tener algo más de información de los mismos, seguid el siguiente [enlace](https://github.com/Azure-Samples/azure-servicebus-messaging-samples/blob/master/TopicFilters/readme.md#what-are-subscription-filters).
+No me voy a parar mucho para explicar las diferencias de cada uno de ellos, pero si queréis tener algo más de información de los mismos, seguid el siguiente [enlace a la documentación oficial en GitHub de Azure-Samples](https://github.com/Azure-Samples/azure-servicebus-messaging-samples/blob/master/TopicFilters/readme.md#what-are-subscription-filters).
 
 ## El ejemplo
 ### Escenario
@@ -198,7 +198,7 @@ private class ConsoleProvider
     {
         Console.WriteLine($"EventType.Id: {eventType.Id}");
         Console.WriteLine($"EventType.Type: {eventType.Type}");
-        await Task.Run(() => { });
+        await Task.CompletedTask;
     }
 }
 {% endhighlight %}
