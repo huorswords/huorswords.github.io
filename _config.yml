@@ -10,6 +10,6 @@ github_username:  huorswords
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 encoding: utf-8
 timezone: Europe/Madrid
