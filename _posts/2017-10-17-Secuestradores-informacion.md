@@ -2,7 +2,7 @@
 layout: post
 title:  "Secuestradores de información"
 date:   2017-10-17 17:00:00
-categories: Opinión Equipo Personas Antonios
+categories: Opinion Equipo Personas Antonios
 ---
 # >_
 
