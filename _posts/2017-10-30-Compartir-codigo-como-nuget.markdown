@@ -40,7 +40,7 @@ Una vez generado el paquete NuGet, subirlo a [NuGet.org](https://www.nuget.org) 
 
 [Accede a https://www.NuGet.org/packages/manage/upload](https://www.NuGet.org/packages/manage/upload) (requiere registro previo), selecciona **Browse...**, navega hasta donde hayas generado tu package (normalmente en la carpeta de binaries de tu proyecto, una vez compilado) y acepta la subida.
 
-![NuGet-Upload](/assets/NuGet-upload.jpg)
+![NuGet-Upload](/assets/nuget-upload.jpg)
 
 Al cabo de unos minutos, el paquete estará disponible para su descarga.
 
