@@ -20,7 +20,7 @@ Antes de llegar a "la receta", es importante entender cómo es la estructura de 
 
 La estructura de directorio para un webjob continuo en Azure es esta.
 
-> app_data/jobs/continuous/_%nombre%_
+> app_data/jobs/continuous/%nombre%
 
 Dentro de dicha carpeta, se deben ubicar todos los ficheros que sean necesarios para ejecutar tu aplicación de consola.
 
@@ -38,15 +38,13 @@ El pipeline en .NET Framework está formado por los siguientes steps básicos.
 
 #### TASK: Nuget Restore
 
-Nada especial aquí. Es una tarea común a casi cualquier tipo de proyecto .NET Framework.
-
 | Propiedad | Valor |
 |:-|:-|
 | Path to solution, packages.config or project.json | *<La ruta al fichero .sln donde se encuentra tu webjob>* |
 
-#### TASK: Visual Studio Build
+Nada especial aquí. Es una tarea común a casi cualquier tipo de proyecto .NET Framework.
 
-Para el paso de compilación son importantes los argumentos que le pasamos a MSBuild. Si repasas el valor correspondiente, verás que tienen sentido por si mismos.
+#### TASK: Visual Studio Build
 
 | Propiedad | Valor |
 |:-|:-|
@@ -56,13 +54,15 @@ Para el paso de compilación son importantes los argumentos que le pasamos a MSB
 | Platform | **$(BuildPlatform)** |
 | Configuration | **$(BuildConfiguration)** |
 
-#### TASK: Publish Build Artifact
+Para el paso de compilación son importantes los argumentos que le pasamos a MSBuild. Si repasas el valor correspondiente, verás que tienen sentido por si mismos.
 
-No requiere comentarios.
+#### TASK: Publish Build Artifact
 
 | Propiedad | Valor |
 |:-|:-|
 | Path to publish | **$(build.artifactstagingdirectory)** |
+
+No requiere comentarios.
 
 ---
 
@@ -77,46 +77,46 @@ El pipeline en .NET core es un poco más complejo que el de .NET Framework
 
 #### TASK: dotnet core build
 
-Importante aquí definir la ruta de salida de tus binarios para que sigan la estructura de directorios del webjob (propiedad **Arguments**).
-
 | Propiedad | Valor |
 |:-|:-|
 | Command | **build** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
-| Arguments | **-o "$(build.binariesDirectory)/app_data/jobs/continuous/_<nombre_de_tu_job>_"** |
+| Arguments | **-o "$(build.binariesDirectory)/app_data/jobs/continuous/<nombre_de_tu_job>"** |
+
+Importante aquí definir la ruta de salida de tus binarios para que sigan la estructura de directorios del webjob (propiedad **Arguments**).
 
 #### TASK: dotnet core publish
-
-El punto principal de esta task es precisamente los argumentos que le pasamos al comando dotnet publish. Es imprescindible que incluyas **--self-contained** para que el proceso de publicación te genere un .exe en vez de una dll, y por concatenación de parámetros, se exige que indiques también el runtime para el que quieres generar el ejecutable.
-
-Los valores de runtime disponibles para esta opción los puedes consultar en la [documentación sobre identificadores de entorno de ejecución en .NET Core](https://docs.microsoft.com/es-es/dotnet/core/rid-catalog) de Microsoft.
 
 | Propiedad | Valor |
 |:-|:-|
 | Command | **publish** |
 | Publish web projects | **false** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
-| Arguments | **-o "$(build.artifactstagingdirectory)/app_data/jobs/continuous/_<nombre_de_tu_job>_" --self-contained --runtime win10-x64** |
+| Arguments | **-o "$(build.artifactstagingdirectory)/app_data/jobs/continuous/<nombre_de_tu_job>" --self-contained --runtime win10-x64** |
 | Zip published projects | **false** |
 | Add project name to publish path | **false** |
 
-#### TASK: Archive staging directory
+El punto principal de esta task es precisamente los argumentos que le pasamos al comando dotnet publish. Es imprescindible que incluyas **--self-contained** para que el proceso de publicación te genere un .exe en vez de una dll, y por concatenación de parámetros, se exige que indiques también el runtime para el que quieres generar el ejecutable.
 
-Como hemos desactivado el zip en el step anterior, lo debemos hacer a mano.
+Los valores de runtime disponibles para esta opción los puedes consultar en la [documentación sobre identificadores de entorno de ejecución en .NET Core](https://docs.microsoft.com/es-es/dotnet/core/rid-catalog) de Microsoft.
+
+#### TASK: Archive staging directory
 
 | Propiedad | Valor |
 |:-|:-|
 | Root folder or file to archive | **$(Build.ArtifactStagingDirectory)**|
 | Archive file to create | **$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip**|
 
-#### TASK: Command Line: rmdir app_data /S /Q
+Como hemos desactivado el zip en el step anterior, lo debemos hacer a mano.
 
-El objetivo de este paso es limpiar el artefacto resultante, para dejar única y exclusivamente el zip generado en el step anterior.
+#### TASK: Command Line: rmdir app_data /S /Q
 
 | Propiedad | Valor |
 |:-|:-|
 |Script|**rmdir app_data /S /Q**|
 |Working Directory| **$(Build.ArtifactStagingDirectory)**|
+
+El objetivo de este paso es limpiar el artefacto resultante, para dejar única y exclusivamente el zip generado en el step anterior.
 
 ## Conclusión
 
