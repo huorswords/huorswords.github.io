@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "VSTS | Desplegar un webjob continuo en .NET Core 2.x a Azure"
-date:   2018-07-12 18:00:00
+date:   2018-08-24 13:00:00
 categories: azure vsts webjob netcore receta recipe build pipeline
 ---
 # >_
