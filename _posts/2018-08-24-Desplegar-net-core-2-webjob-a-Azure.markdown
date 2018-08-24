@@ -109,7 +109,7 @@ Los valores de runtime disponibles para esta opción los puedes consultar en la 
 
 Como hemos desactivado el zip en el step anterior, lo debemos hacer a mano.
 
-#### TASK: Command Line: rmdir app_data /S /Q
+#### TASK: Command Line
 
 | Propiedad | Valor |
 |:-|:-|
