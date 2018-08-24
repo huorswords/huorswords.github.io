@@ -13,4 +13,4 @@ markdown: kramdown
 highlighter: rouge
 encoding: utf-8
 timezone: Europe/Madrid
-theme: jekyll-theme-cayman
+remote_theme: mmistakes/minimal-mistakes
