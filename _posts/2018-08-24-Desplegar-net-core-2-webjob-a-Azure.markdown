@@ -81,7 +81,7 @@ El pipeline en .NET core es un poco más complejo que el de .NET Framework
 |:-|:-|
 | Command | **build** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
-| Arguments | **-o "$(build.binariesDirectory)/app_data/jobs/continuous/<nombre_de_tu_job>"** |
+| Arguments | **-o "$(build.binariesDirectory)/app_data/jobs/continuous/%nombre_de_tu_job%"** |
 
 Importante aquí definir la ruta de salida de tus binarios para que sigan la estructura de directorios del webjob (propiedad **Arguments**).
 
@@ -92,7 +92,7 @@ Importante aquí definir la ruta de salida de tus binarios para que sigan la est
 | Command | **publish** |
 | Publish web projects | **false** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
-| Arguments | **-o "$(build.artifactstagingdirectory)/app_data/jobs/continuous/<nombre_de_tu_job>" --self-contained --runtime win10-x64** |
+| Arguments | **-o "$(build.artifactstagingdirectory)/app_data/jobs/continuous/%nombre_de_tu_job%" --self-contained --runtime win10-x64** |
 | Zip published projects | **false** |
 | Add project name to publish path | **false** |
 
