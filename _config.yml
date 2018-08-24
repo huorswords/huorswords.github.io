@@ -14,6 +14,5 @@ highlighter: rouge
 encoding: utf-8
 timezone: Europe/Madrid
 theme: minima
-remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
