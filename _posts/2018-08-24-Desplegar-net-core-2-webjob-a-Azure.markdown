@@ -39,7 +39,7 @@ El pipeline en .NET Framework está formado por los siguientes steps básicos.
 Nada especial aquí. Es una tarea común a casi cualquier tipo de proyecto .NET Framework.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Path to solution, packages.config or project.json | *<La ruta al fichero .sln donde se encuentra tu webjob>* |
 
 #### TASK: Visual Studio Build
@@ -47,7 +47,7 @@ Nada especial aquí. Es una tarea común a casi cualquier tipo de proyecto .NET 
 Para el paso de compilación son importantes los argumentos que le pasamos a MSBuild. Si repasas el valor correspondiente, verás que tienen sentido por si mismos.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Solution | *<La ruta al fichero .sln donde se encuentra tu webjob>* |
 | Visual Studio Version | **Visual Studio 2017** |
 | MSBuild Arguments | **/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactstagingdirectory)\\"** |
@@ -59,7 +59,7 @@ Para el paso de compilación son importantes los argumentos que le pasamos a MSB
 No requiere comentarios.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Path to publish | **$(build.artifactstagingdirectory)** |
 
 ### ... en .NET Core
@@ -76,7 +76,7 @@ El pipeline en .NET core es un poco más complejo que el de .NET Framework
 Importante aquí definir la ruta de salida de tus binarios para que sigan la estructura de directorios del webjob (propiedad **Arguments**).
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Command | **build** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
 | Arguments | **-o "$(build.binariesDirectory)/app_data/jobs/continuous/_<nombre_de_tu_job>_"** |
@@ -88,7 +88,7 @@ El punto principal de esta task es precisamente los argumentos que le pasamos al
 Los valores de runtime disponibles para esta opción los puedes consultar en la [documentación sobre identificadores de entorno de ejecución en .NET Core](https://docs.microsoft.com/es-es/dotnet/core/rid-catalog) de Microsoft.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Command | **publish** |
 | Publish web projects | **false** |
 | Path to project(s) | *<La ruta al fichero .csproj de tu webjob>* |
@@ -101,7 +101,7 @@ Los valores de runtime disponibles para esta opción los puedes consultar en la 
 Como hemos desactivado el zip en el step anterior, lo debemos hacer a mano.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 | Root folder or file to archive | **$(Build.ArtifactStagingDirectory)**|
 | Archive file to create | **$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip**|
 
@@ -110,7 +110,7 @@ Como hemos desactivado el zip en el step anterior, lo debemos hacer a mano.
 El objetivo de este paso es limpiar el artefacto resultante, para dejar única y exclusivamente el zip generado en el step anterior.
 
 | Propiedad | Valor |
-|-|-|
+|:-|:-|
 |Script|**rmdir app_data /S /Q**|
 |Working Directory| **$(Build.ArtifactStagingDirectory)**|
 
