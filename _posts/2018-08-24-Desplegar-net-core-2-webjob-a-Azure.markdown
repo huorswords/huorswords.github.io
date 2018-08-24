@@ -26,6 +26,8 @@ Dentro de dicha carpeta, se deben ubicar todos los ficheros que sean necesarios 
 
 ## VSTS - Build pipeline
 
+---
+
 ### ... en .NET Framework
 
 El pipeline en .NET Framework está formado por los siguientes steps básicos.
@@ -61,6 +63,8 @@ No requiere comentarios.
 | Propiedad | Valor |
 |:-|:-|
 | Path to publish | **$(build.artifactstagingdirectory)** |
+
+---
 
 ### ... en .NET Core
 
