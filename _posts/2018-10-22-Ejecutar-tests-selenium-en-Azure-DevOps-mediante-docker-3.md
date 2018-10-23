@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Azure DevOps | Ejecutar tests funcionales con Selenium y Docker (3/3)"
-date:   2018-10-22 18:00:00
+date:   2018-10-22 18:02:00
 categories: AzureDevOps receta recipe build release pipeline functional tests docker selenium
 ---
 # >_
