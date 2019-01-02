@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Azure DevOps | Build definition para .NET Core 2.2"
-date:   2018-01-02 16:00:00
+date:   2019-01-02 16:00:00
 categories: AzureDevOps receta recipe build release pipeline net core 2.2
 ---
 # >_
