@@ -93,4 +93,4 @@ Like this:
 
 ## Acknoledgement
 
-This solution is just an implementation suggested on [this stackoverflow question](https://stackoverflow.com/questions/57549771/azure-devops-private-nuget-repo-unauthorized-when-building-with-docker). Thank you OP and Stack Overflow users that answer de question. All the kudos are yours. :)
+This solution is just an implementation suggested on [this stackoverflow question](https://stackoverflow.com/questions/57549771/azure-devops-private-nuget-repo-unauthorized-when-building-with-docker). Thank you OP and Stack Overflow users that answered de question. All the kudos are yours. :)
